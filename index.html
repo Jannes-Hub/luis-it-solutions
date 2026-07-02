@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luis IT Solutions | Professionelle IT-Dienstleistungen</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <style>
+        body { font-family: 'Inter', system_ui, sans-serif; }
+        .section-header { font-size: 2.5rem; line-height: 1.1; font-weight: 700; color: #0A2540; }
+        .service-card, .branch-card { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+        .service-card:hover, .branch-card:hover { transform: translateY(-6px); box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1); }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+
+    <!-- Navbar mit schrumpfendem Logo -->
+    <nav id="navbar" class="bg-white border-b border-gray-100 sticky top-0 z-50 transition-all duration-300">
+        <div class="max-w-screen-xl mx-auto">
+            <div class="flex items-center justify-between px-8 py-5">
+                <div id="logo-container" class="flex items-center gap-x-3 transition-all duration-300">
+                    <img src="luis-logo-transparent.png" alt="Luis IT Solutions Logo" class="h-20 w-auto transition-all duration-300">
+                    <div>
+                        <span class="font-bold text-3xl tracking-tighter text-[#0A2540] transition-all duration-300">Luis</span>
+                        <span class="font-bold text-3xl tracking-tighter text-[#00D4FF] transition-all duration-300">IT</span>
+                    </div>
+                </div>
+
+                <div class="hidden md:flex items-center gap-x-8 text-sm">
+                    <a href="#services" class="hover:text-[#00D4FF] transition-colors font-medium">Leistungen</a>
+                    <a href="#branchen" class="hover:text-[#00D4FF] transition-colors font-medium">Branchen</a>
+                    <a href="#about" class="hover:text-[#00D4FF] transition-colors font-medium">Über uns</a>
+                    <a href="#contact" class="hover:text-[#00D4FF] transition-colors font-medium">Kontakt</a>
+                </div>
+
+                <button onclick="showContactModal()" class="px-5 py-2.5 text-sm font-semibold rounded-xl bg-[#0A2540] text-white hover:bg-[#1E3A5F] transition-colors">
+                    Kostenloses Beratungsgespräch
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="max-w-screen-xl mx-auto px-8 pt-16 pb-20">
+        <div class="grid md:grid-cols-12 gap-12 items-center">
+            <div class="md:col-span-7">
+                <div class="inline-flex items-center gap-x-2 bg-[#F0F7FF] text-[#0A2540] px-4 py-1.5 rounded-2xl text-sm font-medium mb-6">
+                    <div class="w-2 h-2 bg-[#00D4FF] rounded-full animate-pulse"></div>
+                    Seit 2020 Ihr zuverlässiger IT-Partner in der Region
+                </div>
+                <h1 class="text-6xl md:text-6xl font-bold tracking-tighter leading-none text-[#0A2540]">
+                    IT, die<br> <span class="text-[#00D4FF]">einfach funktioniert.</span>
+                </h1>
+                <p class="mt-6 max-w-lg text-xl text-gray-600">
+                    Professionelle IT-Lösungen – für Privatkunden, Selbstständige und Unternehmen.
+                </p>
+                <div class="flex flex-wrap gap-4 mt-10">
+                    <button onclick="showContactModal()" class="inline-flex items-center justify-center px-8 h-14 rounded-2xl bg-[#0A2540] hover:bg-[#1E3A5F] text-white font-semibold">
+                        Jetzt Beratung anfragen
+                    </button>
+                    <a href="#branchen" class="inline-flex items-center justify-center px-8 h-14 rounded-2xl border border-gray-200 hover:bg-gray-50 font-semibold">
+                        Branchen entdecken
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="max-w-screen-xl mx-auto px-8 py-16">
+        <div class="text-center mb-12">
+            <div class="inline-block px-4 py-1 bg-[#F0F7FF] text-[#0A2540] text-sm font-semibold tracking-wider rounded-2xl mb-4">
+                WAS WIR ANBIETEN
+            </div>
+            <h2 class="section-header">IT-Lösungen, die<br> Sie voranbringen</h2>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="service-card bg-white border border-gray-100 p-8 rounded-3xl">
+                <div class="w-14 h-14 bg-[#F0F7FF] rounded-2xl flex items-center justify-center mb-6">
+                    <i class="fas fa-server text-[#0A2540] text-3xl"></i>
+                </div>
+                <h3 class="font-semibold text-2xl tracking-tight mb-2">Hardware &amp; Infrastruktur</h3>
+                <p class="text-gray-600 text-sm">Professionelle Planung, Installation und Betreuung Ihrer IT-Hardware und Netzwerke.</p>
+            </div>
+
+            <div class="service-card bg-white border border-gray-100 p-8 rounded-3xl">
+                <div class="w-14 h-14 bg-[#F0F7FF] rounded-2xl flex items-center justify-center mb-6">
+                    <i class="fas fa-laptop-code text-[#0A2540] text-3xl"></i>
+                </div>
+                <h3 class="font-semibold text-2xl tracking-tight mb-2">Software &amp; Entwicklung</h3>
+                <p class="text-gray-600 text-sm">Individuelle Softwarelösungen, Automatisierungen und Weiterentwicklungen.</p>
+            </div>
+
+            <div class="service-card bg-white border border-gray-100 p-8 rounded-3xl">
+                <div class="w-14 h-14 bg-[#F0F7FF] rounded-2xl flex items-center justify-center mb-6">
+                    <i class="fas fa-globe text-[#0A2540] text-3xl"></i>
+                </div>
+                <h3 class="font-semibold text-2xl tracking-tight mb-2">Websites &amp; Online-Auftritt</h3>
+                <p class="text-gray-600 text-sm">Moderne, professionelle Websites mit gutem Design und optimaler Benutzerfreundlichkeit.</p>
+            </div>
+
+            <div class="service-card bg-white border border-gray-100 p-8 rounded-3xl">
+                <div class="w-14 h-14 bg-[#F0F7FF] rounded-2xl flex items-center justify-center mb-6">
+                    <i class="fas fa-user text-[#0A2540] text-3xl"></i>
+                </div>
+                <h3 class="font-semibold text-2xl tracking-tight mb-2">IT für Privatpersonen</h3>
+                <p class="text-gray-600 text-sm">Persönliche Hilfe bei PC-Problemen, Datenrettung, Smart Home und digitaler Sicherheit.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Branchen -->
+    <section id="branchen" class="bg-[#F8FAFC] py-16">
+        <div class="max-w-screen-xl mx-auto px-8">
+            <div class="text-center mb-12">
+                <div class="inline-block px-4 py-1 bg-white text-[#0A2540] text-sm font-semibold tracking-wider rounded-2xl mb-4 border">FÜR IHRE BRANCHE</div>
+                <h2 class="section-header">IT-Lösungen, die zu<br> Ihrem Geschäft passen</h2>
+                <p class="mt-4 text-xl text-gray-600 max-w-2xl mx-auto">Jede Branche hat ihre eigenen Herausforderungen. Wir kennen sie und entwickeln passende Lösungen.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <!-- Handwerk & Bau -->
+                <div class="branch-card bg-white border border-gray-100 p-8 rounded-3xl flex flex-col">
+                    <div>
+                        <i class="fas fa-hard-hat text-4xl text-[#0A2540] mb-4"></i>
+                        <h3 class="font-semibold text-2xl mb-3">Handwerk &amp; Bau</h3>
+                        <p class="text-gray-600 mb-6">Digitalisieren Sie Ihren Betrieb – von der Zeiterfassung bis zur Rechnungsstellung.</p>
+                    </div>
+                    <div class="mt-auto flex flex-col gap-y-3">
+                        <button onclick="showModal('handwerk')" class="w-full py-3 rounded-2xl border border-gray-300 hover:bg-gray-50 font-semibold">Mehr erfahren</button>
+                        <button onclick="showContactModal()" class="w-full py-3 rounded-2xl bg-[#0A2540] text-white font-semibold hover:bg-[#1E3A5F]">Jetzt Beratung anfragen</button>
+                    </div>
+                </div>
+
+                <!-- Gastronomie -->
+                <div class="branch-card bg-white border border-gray-100 p-8 rounded-3xl flex flex-col">
+                    <div>
+                        <i class="fas fa-utensils text-4xl text-[#0A2540] mb-4"></i>
+                        <h3 class="font-semibold text-2xl mb-3">Gastronomie</h3>
+                        <p class="text-gray-600 mb-6">Online-Reservierungen, digitale Bestellsysteme und moderne Kassentechnik.</p>
+                    </div>
+                    <div class="mt-auto flex flex-col gap-y-3">
+                        <button onclick="showModal('gastronomie')" class="w-full py-3 rounded-2xl border border-gray-300 hover:bg-gray-50 font-semibold">Mehr erfahren</button>
+                        <button onclick="showContactModal()" class="w-full py-3 rounded-2xl bg-[#0A2540] text-white font-semibold hover:bg-[#1E3A5F]">Jetzt Beratung anfragen</button>
+                    </div>
+                </div>
+
+                <!-- Ärzte & Therapeuten -->
+                <div class="branch-card bg-white border border-gray-100 p-8 rounded-3xl flex flex-col">
+                    <div>
+                        <i class="fas fa-user-md text-4xl text-[#0A2540] mb-4"></i>
+                        <h3 class="font-semibold text-2xl mb-3">Ärzte &amp; Therapeuten</h3>
+                        <p class="text-gray-600 mb-6">Online-Terminbuchung, Patientenverwaltung und DSGVO-konforme Lösungen.</p>
+                    </div>
+                    <div class="mt-auto flex flex-col gap-y-3">
+                        <button onclick="showModal('aerzte')" class="w-full py-3 rounded-2xl border border-gray-300 hover:bg-gray-50 font-semibold">Mehr erfahren</button>
+                        <button onclick="showContactModal()" class="w-full py-3 rounded-2xl bg-[#0A2540] text-white font-semibold hover:bg-[#1E3A5F]">Jetzt Beratung anfragen</button>
+                    </div>
+                </div>
+
+                <!-- Immobilienverwaltung -->
+                <div class="branch-card bg-white border border-gray-100 p-8 rounded-3xl flex flex-col">
+                    <div>
+                        <i class="fas fa-building text-4xl text-[#0A2540] mb-4"></i>
+                        <h3 class="font-semibold text-2xl mb-3">Immobilienverwaltung</h3>
+                        <p class="text-gray-600 mb-6">Mieterportale, digitale Wartung und automatisierte Abrechnungen.</p>
+                    </div>
+                    <div class="mt-auto flex flex-col gap-y-3">
+                        <button onclick="showModal('immobilien')" class="w-full py-3 rounded-2xl border border-gray-300 hover:bg-gray-50 font-semibold">Mehr erfahren</button>
+                        <button onclick="showContactModal()" class="w-full py-3 rounded-2xl bg-[#0A2540] text-white font-semibold hover:bg-[#1E3A5F]">Jetzt Beratung anfragen</button>
+                    </div>
+                </div>
+
+                <!-- Fitnessstudio & Physiotherapie -->
+                <div class="branch-card bg-white border border-gray-100 p-8 rounded-3xl flex flex-col">
+                    <div>
+                        <i class="fas fa-dumbbell text-4xl text-[#0A2540] mb-4"></i>
+                        <h3 class="font-semibold text-2xl mb-3">Fitnessstudio &amp; Physiotherapie</h3>
+                        <p class="text-gray-600 mb-6">Mitgliederverwaltung, Online-Buchung und modernes Studio-Management.</p>
+                    </div>
+                    <div class="mt-auto flex flex-col gap-y-3">
+                        <button onclick="showModal('fitness')" class="w-full py-3 rounded-2xl border border-gray-300 hover:bg-gray-50 font-semibold">Mehr erfahren</button>
+                        <button onclick="showContactModal()" class="w-full py-3 rounded-2xl bg-[#0A2540] text-white font-semibold hover:bg-[#1E3A5F]">Jetzt Beratung anfragen</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="bg-white py-16">
+        <div class="max-w-screen-xl mx-auto px-8 text-center">
+            <h2 class="section-header mb-4">Ihr zuverlässiger IT-Partner vor Ort.</h2>
+            <p class="max-w-2xl mx-auto text-gray-600">Mit über 6 Jahren Erfahrung unterstützen wir Privatkunden, Selbstständige und Unternehmen bei der Digitalisierung.</p>
+        </div>
+    </section>
+
+    <!-- Kontakt Formular -->
+    <section id="contact" class="bg-white py-16 border-t">
+        <div class="max-w-screen-xl mx-auto px-8">
+            <div class="grid md:grid-cols-2 gap-x-16">
+                <div>
+                    <h2 class="text-4xl font-bold tracking-tight">Lassen Sie uns<br> ins Gespräch kommen.</h2>
+                    <div class="mt-8 space-y-3 text-lg">
+                        <div><i class="fas fa-phone mr-2 text-[#00D4FF]"></i> 0176 70354739</div>
+                        <div><i class="fas fa-envelope mr-2 text-[#00D4FF]"></i> jannes.hupfeld@web.de</div>
+                        <div><i class="fas fa-map-marker-alt mr-2 text-[#00D4FF]"></i> Silchertraße 1/2, 71364 Winnenden</div>
+                    </div>
+                </div>
+
+                <form name="contact" method="POST" action="/success" data-netlify="true" class="mt-10 md:mt-0 bg-gray-50 p-8 rounded-3xl border">
+                    <input type="hidden" name="form-name" value="contact">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <input type="text" name="vorname" placeholder="Vorname" required class="border border-gray-300 rounded-2xl px-4 h-12">
+                        <input type="text" name="nachname" placeholder="Nachname" required class="border border-gray-300 rounded-2xl px-4 h-12">
+                    </div>
+                    <input type="tel" name="telefon" placeholder="Telefonnummer" class="mt-4 w-full border border-gray-300 rounded-2xl px-4 h-12">
+                    <input type="email" name="email" placeholder="E-Mail Adresse" required class="mt-4 w-full border border-gray-300 rounded-2xl px-4 h-12">
+                    <textarea name="nachricht" placeholder="Ihre Nachricht" rows="4" required class="mt-4 w-full border border-gray-300 rounded-2xl p-4"></textarea>
+                    <button type="submit" class="mt-6 w-full h-14 bg-[#0A2540] hover:bg-[#1E3A5F] text-white font-bold rounded-2xl">
+                        Nachricht abschicken
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modals -->
+    <!-- Branchen Detail Modal -->
+    <div id="branchModal" onclick="hideBranchModal()" class="hidden fixed inset-0 bg-black bg-opacity-50 z-[100] flex items-center justify-center p-4">
+        <div onclick="event.stopImmediatePropagation()" class="bg-white rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+            <div id="branchModalContent" class="p-8"></div>
+            <div class="border-t p-6 flex justify-end gap-x-3">
+                <button onclick="hideBranchModal()" class="px-6 py-3 rounded-2xl border hover:bg-gray-100">Schließen</button>
+                <button onclick="hideBranchModal(); showContactModal()" class="px-6 py-3 rounded-2xl bg-[#0A2540] text-white font-semibold">Jetzt Beratung anfragen</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Kontakt Modal -->
+    <div id="contactModal" onclick="hideContactModal()" class="hidden fixed inset-0 bg-black bg-opacity-50 z-[200] flex items-center justify-center p-4">
+        <div onclick="event.stopImmediatePropagation()" class="bg-white rounded-3xl max-w-lg w-full p-8">
+            <h3 class="text-2xl font-bold mb-6">Kostenloses Beratungsgespräch</h3>
+            <form name="contact" method="POST" action="/success" data-netlify="true">
+                <input type="hidden" name="form-name" value="contact">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <input type="text" name="vorname" placeholder="Vorname" required class="border border-gray-300 rounded-2xl px-4 h-12">
+                    <input type="text" name="nachname" placeholder="Nachname" required class="border border-gray-300 rounded-2xl px-4 h-12">
+                </div>
+                <input type="tel" name="telefon" placeholder="Telefonnummer" class="mt-4 w-full border border-gray-300 rounded-2xl px-4 h-12">
+                <input type="email" name="email" placeholder="E-Mail Adresse" required class="mt-4 w-full border border-gray-300 rounded-2xl px-4 h-12">
+                <textarea name="nachricht" placeholder="Ihre Nachricht" rows="4" required class="mt-4 w-full border border-gray-300 rounded-2xl p-4"></textarea>
+                <div class="flex gap-x-3 mt-6">
+                    <button type="button" onclick="hideContactModal()" class="flex-1 py-3 rounded-2xl border">Abbrechen</button>
+                    <button type="submit" class="flex-1 py-3 rounded-2xl bg-[#0A2540] text-white font-semibold">Nachricht senden</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Erfolgs-Modal -->
+    <div id="successModal" class="hidden fixed inset-0 bg-black bg-opacity-50 z-[300] flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-md w-full p-8 text-center">
+            <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <i class="fas fa-check text-green-600 text-3xl"></i>
+            </div>
+            <h3 class="text-2xl font-bold mb-3">Vielen Dank!</h3>
+            <p class="text-gray-600 mb-6">Ihre Nachricht wurde erfolgreich versendet.<br>Wir melden uns in Kürze bei Ihnen.</p>
+            <button onclick="hideSuccessModal()" class="px-8 py-3 bg-[#0A2540] text-white rounded-2xl font-semibold">
+                Zurück zur Website
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // Schrumpfender Logo-Effekt
+        const navbar = document.getElementById('navbar');
+        const logoContainer = document.getElementById('logo-container');
+        const logoImg = logoContainer.querySelector('img');
+        const logoText = logoContainer.querySelectorAll('span');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('py-3');
+                logoImg.classList.remove('h-20');
+                logoImg.classList.add('h-14');
+                logoText.forEach(span => {
+                    span.classList.remove('text-3xl');
+                    span.classList.add('text-2xl');
+                });
+            } else {
+                navbar.classList.remove('py-3');
+                logoImg.classList.remove('h-14');
+                logoImg.classList.add('h-20');
+                logoText.forEach(span => {
+                    span.classList.remove('text-2xl');
+                    span.classList.add('text-3xl');
+                });
+            }
+        });
+
+        // Branchen Detail Modal
+        function showModal(branch) {
+            const modal = document.getElementById('branchModal');
+            const content = document.getElementById('branchModalContent');
+            let html = '';
+
+            if (branch === 'handwerk') {
+                html = `<h2 class="text-3xl font-bold mb-4">Handwerk &amp; Bau</h2><p class="text-gray-600 mb-6">Viele Handwerksbetriebe arbeiten noch mit Zetteln und Excel. Wir bringen Struktur und Effizienz in Ihren Alltag.</p><h4 class="font-semibold mb-3">Unsere Lösungen:</h4><ul class="space-y-2"><li>• Mobile Zeiterfassung für Monteure</li><li>• Digitales Auftrags- und Projektmanagement</li><li>• DATEV-Anbindung &amp; Rechnungsstellung</li></ul>`;
+            } else if (branch === 'gastronomie') {
+                html = `<h2 class="text-3xl font-bold mb-4">Gastronomie</h2><p class="text-gray-600 mb-6">Wir helfen Restaurants, Cafés und Bars bei der Digitalisierung von Reservierung, Bestellung und Kassensystem.</p><h4 class="font-semibold mb-3">Unsere Lösungen:</h4><ul class="space-y-2"><li>• Online-Reservierungssystem</li><li>• Tablet-Bestell- &amp; modernes Kassensystem</li><li>• Website mit Online-Bestellfunktion</li></ul>`;
+            } else if (branch === 'aerzte') {
+                html = `<h2 class="text-3xl font-bold mb-4">Ärzte &amp; Therapeuten</h2><p class="text-gray-600 mb-6">Wir unterstützen Praxen bei der Digitalisierung – mit Fokus auf DSGVO und Patientenfreundlichkeit.</p><h4 class="font-semibold mb-3">Unsere Lösungen:</h4><ul class="space-y-2"><li>• Online-Terminbuchung</li><li>• Patientenverwaltung</li><li>• Videosprechstunde &amp; sichere Kommunikation</li></ul>`;
+            } else if (branch === 'immobilien') {
+                html = `<h2 class="text-3xl font-bold mb-4">Immobilienverwaltung</h2><p class="text-gray-600 mb-6">Reduzieren Sie Ihren administrativen Aufwand mit digitalen Prozessen.</p><h4 class="font-semibold mb-3">Unsere Lösungen:</h4><ul class="space-y-2"><li>• Modernes Mieterportal</li><li>• Digitales Wartungs- &amp; Reparaturmanagement</li><li>• Automatisierte Nebenkostenabrechnung</li></ul>`;
+            } else if (branch === 'fitness') {
+                html = `<h2 class="text-3xl font-bold mb-4">Fitnessstudio &amp; Physiotherapie</h2><p class="text-gray-600 mb-6">Moderne Studios brauchen moderne Systeme – für Mitglieder und das Team.</p><h4 class="font-semibold mb-3">Unsere Lösungen:</h4><ul class="space-y-2"><li>• Online-Mitgliederverwaltung &amp; Buchung</li><li>• Kursplanung und -verwaltung</li><li>• Digitale Mitgliederausweise &amp; App-Zugang</li></ul>`;
+            }
+
+            content.innerHTML = html;
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function hideBranchModal() {
+            document.getElementById('branchModal').classList.remove('flex');
+            document.getElementById('branchModal').classList.add('hidden');
+        }
+
+        function showContactModal() {
+            document.getElementById('contactModal').classList.remove('hidden');
+            document.getElementById('contactModal').classList.add('flex');
+        }
+
+        function hideContactModal() {
+            document.getElementById('contactModal').classList.remove('flex');
+            document.getElementById('contactModal').classList.add('hidden');
+        }
+
+        function showSuccessModal() {
+            document.getElementById('successModal').classList.remove('hidden');
+            document.getElementById('successModal').classList.add('flex');
+        }
+
+        function hideSuccessModal() {
+            document.getElementById('successModal').classList.remove('flex');
+            document.getElementById('successModal').classList.add('hidden');
+        }
+
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Erfolgs-Modal nach Absendung anzeigen
+        if (window.location.hash === '#success') {
+            setTimeout(() => {
+                showSuccessModal();
+            }, 600);
+        }
+    </script>
+
+</body>
+</html>
